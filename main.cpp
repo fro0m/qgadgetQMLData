@@ -42,6 +42,10 @@ public:
         return m_superItem;
     }
 
+    Q_INVOKABLE int getSuperItemXFromC() const {
+        return m_superItem.m_x;
+    }
+
 public slots:
     void setSuperItemP(SuperItem * superItem)
     {

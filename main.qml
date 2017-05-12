@@ -18,5 +18,13 @@ ApplicationWindow {
        text: "QGadget by value  " + model.superItem.x + " " + model.superItem.y +
              "\nQGadget by pointer  "  + model.superItemP.x + " " + model.superItemP.y
 
+       MouseArea {
+           anchors.fill: parent
+           onClicked: {
+               model.superItem.x = model.superItem.x * 2
+               print("\nmodel.x from qml  " + model.superItem.x
+                     + "\nmodel.x from c++ " + model.getSuperItemXFromC())
+           }
+       }
    }
 }
